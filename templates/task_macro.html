@@ -1,0 +1,26 @@
+{% macro task_render(task) -%}
+    <p class="task_header"><b>Задание {{ task.number }}</b></p>
+    <p class="task_id">id: {{task.base_id}}</p>
+    {% if task.source != None %}
+        <p class="task_id">Источник: <a href="{{ url_for('.source_page', source_id=task.source.base_id) }}">{{task.source.name}}</a></p>
+    {% endif %}
+    {% if task.files %}
+        <br>
+        <a class="download_button" href="{{ url_for('.download_task_files', task_id=task.base_id) }}">Загрузить доп. файлы</a>
+    {% endif %}
+    {% for inf_line in task.text.split("||") %}
+        {% if inf_line != "" and loop.index is not divisibleby 2 %}
+            {% set text_lines = inf_line.split("\n") %}
+            {% for text_line in text_lines %}
+                <p>{{ text_line }}</p>
+            {% endfor %}
+        {% else %}
+            <div class="image_with_text">
+                <img src="../static/img/1/{{ task.illustrations[inf_line|int].image_path }}" alt="Картинка" style="margin-bottom: 0px">
+                {% if task.illustrations[inf_line|int].sign != None %}
+                    <p class="image_text">{{ task.illustrations[inf_line|int].sign }}</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    {% endfor %}
+{%- endmacro %}

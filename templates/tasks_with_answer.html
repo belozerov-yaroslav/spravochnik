@@ -1,0 +1,20 @@
+{% extends "article_temlpate.html" %}
+{% import 'task_macro.html' as task_renderer %}
+{% block style %}../static/style.css{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block header %}{{ page_title }}{% endblock %}
+{% block article_body %}
+
+    {% include 'right_side_menu.html' %}
+    {% for task in tasks %}
+        {{ task_renderer.task_render(task) }}
+        <br>
+        <button class="button" onclick="getElementById('answer{{ loop.index }}').style.visibility = 'visible'" id="button{{ loop.index }}">Показать ответ</button>
+        <p class="hidden-answer" id="answer{{ loop.index }}">{{ task.answer }}
+            {% if task.solution %}
+                ; <b>Решение:</b> {{ task.solution }}.
+            {% endif %}
+        </p>
+    {% endfor %}
+
+{% endblock %}

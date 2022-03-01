@@ -1,0 +1,30 @@
+{% extends "article_temlpate.html" %}
+{% block style %}../static/style.css{% endblock %}
+{% block title %}Справка{% endblock %}
+{% block header %}Справка{% endblock %}
+{% block article_body %}
+    <style>
+        .tab {
+            display: inline-block;
+            margin-left: 40px;
+        }
+    </style>
+    <p>
+        <span class="tab"></span>Каждый вариант экзаменационной работы включает в себя 27 заданий, 
+различающихся  уровнем  сложности  и  необходимым  для  их  выполнения 
+программным обеспечением. <br><br>
+<span class="tab"></span>В  работу  входят 10  заданий,  для  выполнения  которых,  помимо 
+тестирующей  системы,  необходимо  специализированное  программное 
+обеспечение (ПО), а именно редакторы электронных таблиц и текстов, среды 
+программирования. <br><br>
+<span class="tab"></span>Ответы на все задания представляют собой одно или несколько чисел, 
+или последовательности символов (букв или цифр). <br><br>
+<span class="tab"></span>Также несколько советов:
+    </p>
+    <div class="image_with_text">
+        <img src="../static/img/tips/how to do.jpg" alt="Картинка" style="margin-bottom: 0px; width: 750px;">
+    </div>
+    <div class="image_with_text">
+        <img src="../static/img/tips/volnenie.jpg" alt="Картинка" style="margin-bottom: 0px;  width: 750px;">
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "article_temlpate.html" %}
+{% import 'task_macro.html' as task_renderer %}
+{% block header %}Вариант ЕГЭ{% endblock %}
+{% block article_body %}
+	<p>Вы набрали {{ result }} баллов из 29 возможных</p>
+	{% for task in tasks %}
+		{{ task_renderer.task_render(task) }}
+		<p style="color: #00945b">Правильный ответ: {{ task.answer }}</p>
+		{% if answers[loop.index - 1] == task.answer %}
+			<p style="color: #00945b">Ваш ответ: {{ answers[loop.index - 1] }}</p>
+		{% else %}
+			<p style="color: red">Ваш ответ: {{ answers[loop.index - 1] }}</p>
+		{% endif %}
+	{% endfor %}
+{% endblock %}

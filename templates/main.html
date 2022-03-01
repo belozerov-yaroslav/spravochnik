@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title%}Справочник ЕГЭ по информатике{% endblock %}
+{% block body %}
+<h1 class="title">Справочный комплекс</h1>
+<h1 class="title">"ЕГЭ по информатике"</h1>
+ <div class="flex-container">
+ 	<a href="/variant" class="main-card-link">
+		<div class="main-card">
+			<h1 class="main-card-title">Вариант ЕГЭ</h1>
+			<p class="main-card-inf">Сформировать вариант ЕГЭ для самопроверки знаний</p>
+		</div>
+	</a>
+	<a href="/training" class="main-card-link">
+		<div class="main-card">
+			<h1 class="main-card-title">Задания</h1>
+			<p class="main-card-inf">Задания ЕГЭ, распределённые по группам</p>
+		</div>
+	</a>
+	<a href="/structure" class="main-card-link">
+		<div class="main-card">
+			<h1 class="main-card-title">Структура заданий</h1>
+			<p class="main-card-inf">Из каких заданий формируется вариант ЕГЭ</p>
+		</div>
+	</a>
+	<a href="/ege_help" class="main-card-link">
+		<div class="main-card">
+			<h1 class="main-card-title">Справка</h1>
+			<p class="main-card-inf">Как проходит ЕГЭ по информатике</p>
+		</div>
+	</a>
+	<a href="/helpful_links" class="main-card-link">
+		<div class="main-card">
+			<h1 class="main-card-title">Полезные ссылки</h1>
+			<p class="main-card-inf">Ресурсы, кторые могут помочь в сдаче экзамена</p>
+		</div>
+	</a>
+	<a href="/about" class="main-card-link">
+		<div class="main-card">
+			<h1 class="main-card-title">О комплексе</h1>
+			<p class="main-card-inf">Информация о цели справочника</p>
+		</div>
+	</a>
+</div>
+{% endblock %}

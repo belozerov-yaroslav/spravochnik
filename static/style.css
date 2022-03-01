@@ -1,0 +1,240 @@
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: center;
+	width: 900px;
+	margin: auto;
+}
+.flex-container-tasks {
+	display: flex;
+	flex-direction: row;
+	flex-flow: wrap;
+	justify-content: center;
+	margin: auto;
+	margin-bottom: 10px;
+}
+.task-anchor {
+	width: 45px;
+	height: 40px;
+	text-align: center;
+	padding-top: 15px;
+	margin: 2px;
+	border-radius: 10px;
+	background: red;
+	background-color: #00945b;
+	transition: background-color .50s;
+	color: white;
+	text-decoration: none;
+}
+.task-anchor:hover{
+	background-color: #00fa9a;
+}
+.title {
+	text-align: center;
+	font-family: arial;
+	font-size: 3em;
+	letter-spacing: 6px;
+	color: #00945b;
+}
+.main-card-link {
+	text-decoration: none;
+	color: #666666;
+}
+.main-card {
+	height: 200px;
+	width: 200px;
+	align-content: center;
+	border-style: solid;
+	border-top-width: 25px;
+	border-bottom-width: 25px;
+	border-left-width: 25px;
+	border-right-width: 25px;
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 50px;
+	border-color: #00fa9a;
+	box-shadow: 5px 5px;
+	transition: box-shadow .80s;
+}
+.main-card-title {
+	color: #00945b;
+	text-align: center;
+	font-family: arial;
+	letter-spacing: 2px;
+}
+.main-card-inf {
+	margin: 5px;
+	color: grey;
+	font-size: 1.1em;
+	text-align: center;
+	font-family: arial;
+}
+.main-card:hover {
+	box-shadow: 20px 20px;
+}
+.article {
+	width: 70vw;
+	margin: auto;
+	text-align: justify;
+	word-wrap: break-word;
+	font-family: cambria;
+	font-size: 1.3em;
+}
+.line-1 {
+  height: 1px;
+  background: #00945b;
+}
+body {
+	padding-top: 25px;
+}
+.task_header {
+	text-align: left;
+	text-decoration: underline;
+	margin-bottom: 0px;
+}
+.task_id {
+	text-align: left;
+	font-size: 0.8em;
+	color: 	grey;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.hidden_task_id {
+	visibility: hidden; 
+	height: 0px; 
+	width: 0px; 
+	padding-top: 0px; 
+	padding-bottom: 0px;
+}
+.answer_input {
+	border-radius: 0px;
+	font-size: 1.5em;
+	font-family: cambria;
+	border-color: #00945b;
+}
+.answer_input:active {
+	border-color: #00945b;
+}
+.button {
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 0px;
+	border-style: solid;
+	border-color: #00945b;
+	align-content: center;
+	border-width: 2px;
+	background-color: white;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-family: cambria;
+	font-size: 1em;
+}
+.button:hover {
+	background-color: #00945b;
+	color: white;
+}
+.download_button {
+	border-radius: 20px;
+	border-style: solid;
+	border-color: #00945b;
+	border-width: 2px;
+	background-color: white;
+	padding: 6px;
+	font-family: cambria;
+	font-size: 0.8em;
+	font-style: normal;
+	text-decoration: none;
+	color: black;
+	text-align: left;
+}
+.download_button:hover {
+	background-color: #00945b;
+	color: white;
+}
+.training-card {
+	margin: 10px;
+	width: 75px;
+	height: 50px;
+	padding-top: 25px;
+}
+.hidden-answer {
+	visibility: hidden;
+	text-align: left;
+}
+.image_with_text
+{
+	text-align: center;
+}
+.image_text
+{
+	margin: auto;
+	margin-top: 0px;
+	font-family: calibri-light;
+	font-size: 0.9em;
+	font-style: italic;
+}
+.flex_side_menu {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	top: 140px;
+	width: 94px;
+	left: 50px;
+}
+.flex_side_menu_card {
+	width: 70px;
+	height: 70px;
+	font-family: calibri;
+	line-height: 1;
+}
+.side_button_title {
+	margin-top: 0px;
+	text-align: center;
+}
+.structure-title {
+	text-align: center;
+}
+
+.flex_side_menu_right {
+	display: flex;
+	position: fixed;
+	flex-direction: column;
+	top: 150px;
+	left: 88vw;
+}
+.right_menu_button {
+	border-radius: 20px;
+	width: 150px;
+	border-style: solid;
+	border-color: #00945b;
+	border-width: 2px;
+	background-color: white;
+	padding: 6px;
+	font-family: cambria;
+	font-size: 0.8em;
+	font-style: normal;
+	text-decoration: none;
+	color: black;
+	text-align: center;
+}
+.right_menu_button:hover {
+	background-color: #00945b;
+	color: white;
+}
+.hidden_instruction {
+	position: fixed;
+	height: 75vh;
+	width: 64.5vw;
+	overflow: scroll;
+	background-color: white;
+	border-width: 5px;
+	border-radius: 5px;
+	border-color: #00945b;
+	border-style: solid;
+	padding: 50px;
+	padding-top: 0px;
+	padding-bottom: 10px;
+}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block body %}
+	<h1 class="title">{% block header %}{% endblock %}</h1>
+	<div class="flex_side_menu">
+		<a class="button" href="{{ url_for('.main_page') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/home.png" height="40px" width="40px">
+				<p class="side_button_title">главная</p>
+			</div>
+		</a>
+		<a class="button" href="{{ url_for('.variant_page') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/check.png" height="40px" width="40px">
+				<p class="side_button_title">вариант</p>
+			</div>
+		</a>
+		<a class="button" href="{{ url_for('.training_page') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/list.png" height="40px" width="40px">
+				<p class="side_button_title">задания</p>
+			</div>
+		</a>
+		<a class="button" href="{{ url_for('.structure_page') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/structure.png" height="40px" width="40px">
+				<p class="side_button_title">структура</p>
+			</div>
+		</a>
+		<a class="button" href="{{ url_for('.ege_help') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/question.png" height="40px" width="40px">
+				<p class="side_button_title">справка</p>
+			</div>
+		</a>
+		<a class="button" href="{{ url_for('.helpful_links') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/link.png" height="40px" width="40px">
+				<p class="side_button_title">полезные ссылки</p>
+			</div>
+		</a>
+		<a class="button" href="{{ url_for('.about') }}">
+			<div class="flex_side_menu_card">
+				<img src="../static/img/logo/inf.png" height="40px" width="40px">
+				<p class="side_button_title">о комплексе</p>
+			</div>
+		</a>
+	</div>
+	<div class="article">
+		<div class="line-1"></div>
+		{% block article_body %}
+		{% endblock %}
+	</div>
+{% endblock %}

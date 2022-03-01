@@ -1,0 +1,39 @@
+{% extends "article_temlpate.html" %}
+{% import 'task_macro.html' as task_renderer %}
+{% block style %}../static/style.css{% endblock %}
+{% block title %}{{ page_title }}{% endblock %}
+{% block header %}{{ page_title }}{% endblock %}
+{% block article_body %}
+
+    {% include 'right_side_menu.html' %}
+
+    {% if for_check %}
+        <form method="post">
+    {% endif %}
+
+    {% for task in tasks %}
+        {{ task_renderer.task_render(task) }}
+
+        {% if for_check %}
+            <input type="text" id="taskId{{ loop.index }}" name="taskId{{ loop.index }}" readonly="true" value="{{ task.base_id }}" class="hidden_task_id"><br>
+            <p>Введите ответ:</p>
+            <input type="text" id="answer{{ loop.index }}" name="answer{{ loop.index }}" class="answer_input" style="margin-top: 0px"><br>
+        {% endif %}
+
+        {% if not for_check %}
+            <br>
+            <button class="button" onclick="getElementById('answer{{ loop.index }}').style.visibility = 'visible'" id="button{{ loop.index }}">Показать ответ</button>
+            <p class="hidden-answer" id="answer{{ loop.index }}">{{ task.answer }}
+                {% if task.solution %}
+                    ; <b>Решение:</b> {{ task.solution }}.
+                {% endif %}
+            </p>
+        {% endif %}
+    {% endfor %}
+
+    {% if for_check %}
+        <input type="submit" value="Отправить на проверку" class="button">
+        </form>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "article_temlpate.html" %}
+{% block style %}../static/style.css{% endblock %}
+{% block title %}Тренировка{% endblock %}
+{% block header %}Тренировка{% endblock %}
+{% block article_body %}
+	{% for task in tasks %}
+		<p class="task_header"><b>Задание {{ task.number }}</b></p>
+		<p class="task_id">id: {{task.base_id}}</p>
+		<p>{{ task.text }}</p>
+		{% for image in task.images %}
+			<img src="../static/img/1/{{ image[0] }}" alt="Картинка" style="margin-bottom: 0px">
+		{% endfor %}
+		<br>
+		<button class="button" onclick="getElementById('answer{{loop.index}}').style.visibility = 'visible'" id="button{{loop.index}}">Показать ответ</button>
+		<p class="hidden-answer" id="answer{{loop.index}}">{{ task.answer }}</p>
+	{% endfor %}
+{% endblock %}

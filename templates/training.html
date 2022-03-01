@@ -1,0 +1,19 @@
+{% extends "article_temlpate.html" %}
+{% block title %}Тренировка{% endblock %}
+{% block header %}Тренировка{% endblock %}
+{% block article_body %}
+	<div class="flex-container-tasks">
+		{% for number in range(1, 28) %}
+			<a class="task-anchor training-card" href="training/{{number}}">{{number}}</a>
+		{% endfor %}
+	</div>
+	<div class="line-1"></div>
+	<div style="text-align: center;">
+		<p>Найти задание по ID</p>
+		<form method="post">
+			<input type="text" name="search" class="answer_input"><br>
+			<input type="submit" value="Найти" class="button">
+		</form>
+		<p style="color: red">{{ message }}</p>
+	</div>
+{% endblock %}
